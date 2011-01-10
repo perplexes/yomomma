@@ -1,8 +1,22 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    archive-tar-minitar (0.5.2)
     builder (3.0.0)
+    columnize (0.3.2)
+    linecache19 (0.5.11)
+      ruby_core_source (>= 0.1.4)
     rack (1.2.1)
+    ruby-debug-base19 (0.11.24)
+      columnize (>= 0.3.1)
+      linecache19 (>= 0.5.11)
+      ruby_core_source (>= 0.1.4)
+    ruby-debug19 (0.11.6)
+      columnize (>= 0.3.1)
+      linecache19 (>= 0.5.11)
+      ruby-debug-base19 (>= 0.11.19)
+    ruby_core_source (0.1.4)
+      archive-tar-minitar (>= 0.5.2)
     sinatra (1.0)
       rack (>= 1.0)
     twiliolib (2.0.7)
@@ -12,5 +26,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  ruby-debug19
   sinatra (= 1.0)
   twiliolib (= 2.0.7)

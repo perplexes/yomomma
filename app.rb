@@ -2,6 +2,7 @@ jokes = File.read('jokes.txt').split("\n\n").map(&:strip).map{|s| s.gsub(/\d+\. 
 
 set :public, File.dirname(__FILE__) + '/public'
 post '/' do
+  puts params.inspect
   @r = Twilio::Response.new
   
   @r.append(Twilio::Say.new(jokes.at(rand(jokes.size)), :voice => "man"))
